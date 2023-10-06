@@ -206,11 +206,13 @@ public class LibreriaBanderas {
         int valor=0;
         for (int row=rowIni; row<rowEnd; row++){
             for(int cell=cellIni; cell<cellEnd; cell++){
-
-                if (cell<valor)
-                    flag[row][cell] = COLOR_BLUE;
-                valor++;
+                    if (cell==0) {
+                        flag[row][cell] = COLOR_BLUE;
+                    cell=1;
+                    }
+                    cell++;
                 }
+
             }
         return flag;
     }
